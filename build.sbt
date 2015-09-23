@@ -1,8 +1,8 @@
-organization := "com.whisk"
+organization := "com.adagility"
 
 name := "docker-it-scala"
 
-version := "0.2.0"
+version := "0.2.1"
 
 scalaVersion := "2.11.7"
 
@@ -24,9 +24,3 @@ libraryDependencies ++= Seq(
   "me.lessis" %% "undelay" % "0.1.0",
   "org.scalatest" %% "scalatest" % "2.2.4",
   "ch.qos.logback" % "logback-classic" % "1.1.2" % "test")
-
-publishTo := {
-  val dir = if (version.value.trim.endsWith(gitHeadCommitSha.value)) "snapshots" else "releases"
-  val repo = Path.userHome / "mvn-repo" / dir
-  Some(Resolver.file("file", repo) )
-}
