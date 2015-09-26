@@ -3,7 +3,6 @@ package whisk.docker
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.time.{ Second, Seconds, Span }
 import org.scalatest.{ GivenWhenThen, BeforeAndAfterAll, Matchers, FlatSpec }
-import whisk.docker.test.DockerTestKit
 
 class AllAtOnceSpec extends FlatSpec with Matchers with BeforeAndAfterAll with GivenWhenThen with ScalaFutures
     with DockerElasticsearchService with DockerCassandraService with DockerNeo4jService with DockerMongodbService with PingContainerKit {

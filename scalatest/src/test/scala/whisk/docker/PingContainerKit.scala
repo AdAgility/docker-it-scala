@@ -1,7 +1,6 @@
 package whisk.docker
 
 import org.scalatest.Suite
-import whisk.docker.test.DockerTestKit
 
 trait PingContainerKit extends DockerTestKit {
   self: Suite =>

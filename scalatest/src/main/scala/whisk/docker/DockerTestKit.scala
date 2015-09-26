@@ -1,4 +1,4 @@
-package whisk.docker.test
+package whisk.docker
 
 import java.io.ByteArrayInputStream
 import java.util.logging.LogManager
@@ -7,7 +7,6 @@ import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.time._
 import org.scalatest.{ BeforeAndAfterAll, Suite }
 import org.slf4j.LoggerFactory
-import whisk.docker.DockerKit
 
 trait DockerTestKit extends BeforeAndAfterAll with ScalaFutures with DockerKit {
   self: Suite =>

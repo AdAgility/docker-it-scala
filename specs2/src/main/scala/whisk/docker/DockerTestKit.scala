@@ -1,10 +1,8 @@
-package whisk.docker.test.specs2
+package whisk.docker
 
 import java.io.ByteArrayInputStream
 import org.slf4j.LoggerFactory
 import java.util.logging.LogManager
-
-import whisk.docker.DockerKit
 
 import scala.concurrent._
 import scala.concurrent.duration._

@@ -1,4 +1,4 @@
-package whisk.docker.test.specs2
+package whisk.docker
 
 import org.specs2.specification.core.SpecificationStructure
 import org.specs2.specification.create.FragmentsFactory
