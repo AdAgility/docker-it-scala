@@ -25,8 +25,10 @@ trait DockerKit {
     Future(docker.client.listImagesCmd().exec().asScala.flatMap(_.getRepoTags).toSet)
   }
 
-  def stopRmAll(): Future[Seq[DockerContainer]] =
-    Future.traverse(dockerContainers)(_.remove(force = true))
+  def stopRmAll(): Future[Seq[DockerContainer]] = {
+    val removeVolumes = !sys.env.get("CIRCLE_CI").isDefined
+    Future.traverse(dockerContainers)(_.remove(force = true, removeVolumes = removeVolumes))
+  }
 
   def pullImages(): Future[Seq[DockerContainer]] = {
     listImages().flatMap { images =>

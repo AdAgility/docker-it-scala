@@ -1,14 +1,12 @@
 
 lazy val commonSettings = Seq(
-  organization := "com.whisk",
-  version := "0.4.0",
+  organization := "com.adagility",
+  version := "0.4.0-SNAPSHOT",
   scalaVersion := "2.11.7",
   crossScalaVersions := Seq("2.11.7", "2.10.5"),
   scalacOptions ++= Seq("-feature", "-deprecation"),
   fork in Test := true,
-  bintrayOrganization := Some("whisk"),
-  licenses += ("MIT", url("http://opensource.org/licenses/MIT")),
-  bintrayRepository := "maven"
+  licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 )
 
 lazy val root =
