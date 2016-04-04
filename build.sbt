@@ -1,7 +1,7 @@
 
 lazy val commonSettings = Seq(
   organization := "com.adagility",
-  version := "0.4.0-SNAPSHOT",
+  version := "0.4.0-adagility",
   scalaVersion := "2.11.7",
   crossScalaVersions := Seq("2.11.7", "2.10.5"),
   scalacOptions ++= Seq("-feature", "-deprecation"),
